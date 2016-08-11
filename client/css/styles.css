@@ -1,0 +1,36 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.artist {
+  color: black;
+  font-family: fantasy;
+}
+
+td {
+  padding: 10px 10px 10px 10px;
+  text-align:center;
+}
+table {
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+tr {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.song:hover {
+  border-radius: 5px;
+  background-color: rgba(0, 255, 255, .5);
+}
+.song:active {
+  background-color: green;
+}
+
+td:first-child{
+    -moz-border-radius:10px 0 0 10px;
+    -webkit-border-radius:10px 0 0 10px;
+}
+td:last-child{
+    -moz-border-radius:0 10px 10px 0;
+    -webkit-border-radius:0 10px 10px 0;
+}
