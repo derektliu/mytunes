@@ -30,12 +30,7 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     this.get('library').on('addToPlaylist', function(song) {
-      console.log('addToPlaylist inside AppModel for Playlist');
       this.get('playlist').trigger('addToPlaylist', song);
-    }, this);
-
-    this.get('playlist').on('enqueue', function(song) {
-      console.log('enqueue inside AppModel for Playlist');
     }, this);
   }
 

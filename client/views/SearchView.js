@@ -8,9 +8,8 @@ var SearchView = Backbone.View.extend({
     </div>'),
 
   events: {
-    'submit': function(e) {
-      e.preventDefault();
-      console.log('go to searchmodel');
+    'submit': function(event) {
+      event.preventDefault();
       this.model.query();
     }
   },

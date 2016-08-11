@@ -3,9 +3,6 @@ body {
   background-color: rgba(55, 132, 117, 1);
   color: rgba(191, 221, 215, 1);
 }
-.artist {
-
-}
 
 th {
   border-bottom: solid;
@@ -13,16 +10,27 @@ th {
   font-size: larger;
 }
 
-button {
-  height: 25px;
+.submit {
+  border: none;
+  padding: +5px;
+  width: 50px;
+  display: inline;
+  color: rgba(191, 221, 215, 1);
+  height: 100%;
   background-color: rgba(113,172,160,1);
   border: none;
+  margin: 0px;
 }
-button:active {
-  border: none;
-  background-color: rgba(150,150,150, .7);
+.submit:active {
+  background-color: rgba(113,172,170, .5);
 }
-
+.playlist {
+  margin-left: 10px;
+  top:65px;
+  left: 550px;
+  width: 350px;
+  position: fixed;
+}
 td {
   padding: 10px 10px 10px 10px;
   text-align:center;
@@ -36,12 +44,15 @@ table {
 }
 audio {
   width: 485px;
+  left: 520px;
+  top: 0px;
   padding: 10px;
+  position: fixed;
 }
 .textInput{
-  width: 300px;
-  height: 20px;
-  margin: 10px;
+  width: 200px;
+  padding: 3px;
+  display: inline;
 }
 tr {
   border-radius: 5px;
@@ -62,8 +73,11 @@ tr {
 .artwork {
   height: 50px;
 }
-form { 
-  width: 500px;
+form {
+  right: 0px;
+  top: 0px;
+  position: fixed;
+  padding: 10px;
   margin: 0px;
  }
 .search {
@@ -71,12 +85,13 @@ form {
   text-align: right;
   width: 100px;
 }
-.search2 {
+.search2 {  
   display:inline-block;
 }
 
 .library {
-  float: left;
+  position: relative;
+  left: 0px;
   width: 500px;
 }
 
@@ -85,7 +100,7 @@ form {
 }
 
 .queue {
-  top: 110px;
+  top: 65px;
   right: 100px;
   position: fixed;
 }
