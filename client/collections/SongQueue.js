@@ -38,8 +38,6 @@ var SongQueue = Backbone.Collection.extend({
 
   playFirst: function() {
     this.models[0].play();
-    // this.remove(this.models[0]);
-
   }
 
 });

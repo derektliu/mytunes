@@ -2,7 +2,6 @@
 var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
-
   template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
 
   events: {
@@ -11,13 +10,14 @@ var LibraryEntryView = Backbone.View.extend({
       this.model.enqueue();
     }
   },
-  initialize : function() {
+
+  initialize: function() {
     this.model.on('enqueue', function() {
-      console.log('library enqueue');
     });
   },
 
   render: function() {
+    if(this.model.attributes.artist === undefined) {debugger;}
     return this.$el.html(this.template(this.model.attributes));
   }
 
