@@ -9,5 +9,10 @@ var Songs = Backbone.Collection.extend({
   
   initialize: function () {
     this.fetch();
-  }  
+  }
+
+  // search: function(input) {
+  //   this.fetch(input);
+  // }
+
 });
