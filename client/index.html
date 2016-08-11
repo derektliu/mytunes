@@ -13,7 +13,7 @@
     <script src="data/data.js"></script>
 
     <script src="models/SongModel.js"></script>
-    <script src="collections/Songs.js"></script>
+    <script src="collections/Library.js"></script>
     <script src="collections/SongQueue.js"></script>
     <script src="models/AppModel.js"></script>
     <script src="models/SearchModel.js"></script>
@@ -29,8 +29,8 @@
     <script>
       $(function() {
         // set up model objects
-        var library = new Songs();
-        var app = new AppModel({library: library});
+        var library = new Library();
+        var app = new AppModel();
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
         // put the view onto the screen
