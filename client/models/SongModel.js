@@ -16,6 +16,7 @@ var SongModel = Backbone.Model.extend({
     this.trigger('play', this);
   }, 
   enqueue: function() {
+    console.log('enqueue inside songmodel');
     this.trigger('enqueue', this);
   },
   dequeue: function() {
@@ -23,5 +24,16 @@ var SongModel = Backbone.Model.extend({
   },
   ended: function() {
     this.trigger('ended', this);
+  },
+
+  addToPlaylist: function() {
+    console.log('addToPlaylist inside SongModel');
+    this.trigger('addToPlaylist', this);
+  },
+
+  removeFromPlaylist: function() {
+    console.log('remove from playlist inside SongModel');
+    this.trigger('removeFromPlaylist', this);
   }
+
 });

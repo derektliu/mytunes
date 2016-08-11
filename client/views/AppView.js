@@ -8,6 +8,9 @@ var AppView = Backbone.View.extend({
     this.searchView = new SearchView({model: this.model.get('search')});
     this.libraryView = new LibraryView({collection: this.model.get('library')});
     this.songQueueView = new SongQueueView({collection: this.model.get('songQueue')});
+    this.playlistView = new PlaylistView({collection: this.model.get('playlist')});
+
+
 
     // change:currentSong - this is Backbone's way of allowing you to filter events to
     // ONLY receive change events for the specific property, 'currentSong'
@@ -27,7 +30,8 @@ var AppView = Backbone.View.extend({
       this.playerView.$el,
       this.searchView.$el,
       this.libraryView.$el,
-      this.songQueueView.$el
+      this.songQueueView.$el,
+      this.playlistView.$el
     ]);
   }
 
