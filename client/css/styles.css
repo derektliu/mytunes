@@ -1,38 +1,91 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: rgba(55, 132, 117, 1);
+  color: rgba(191, 221, 215, 1);
 }
 .artist {
-  color: black;
-  font-family: fantasy;
+
+}
+
+th {
+  border-bottom: solid;
+  padding-bottom: 10px;
+  font-size: larger;
+}
+
+button {
+  height: 25px;
+  background-color: rgba(113,172,160,1);
+  border: none;
+}
+button:active {
+  border: none;
+  background-color: rgba(150,150,150, .7);
 }
 
 td {
   padding: 10px 10px 10px 10px;
   text-align:center;
+  vertical-align: middle;
 }
 table {
-  border-radius: 5px;
+  /*width: 480px;*/
+  padding: 20px;
+  margin-top: 20px;
   border-collapse: collapse;
 }
+audio {
+  width: 485px;
+  padding: 10px;
+}
+.textInput{
+  width: 300px;
+  height: 20px;
+  margin: 10px;
+}
 tr {
-  border: 1px solid black;
   border-radius: 5px;
 }
 .song:hover {
   border-radius: 5px;
-  background-color: rgba(0, 255, 255, .5);
+  background-color: rgba(102, 140, 126, .5);
 }
 .song:active {
-  background-color: green;
+  background-color: rgba(72, 116, 100, .5);
 }
 
-.song .click
-
-td:first-child{
-    -moz-border-radius:10px 0 0 10px;
-    -webkit-border-radius:10px 0 0 10px;
+.app {
+  /*width: 500px;*/
+  margin: 0px;
 }
-td:last-child{
-    -moz-border-radius:0 10px 10px 0;
-    -webkit-border-radius:0 10px 10px 0;
+
+.artwork {
+  height: 50px;
+}
+form { 
+  width: 500px;
+  margin: 0px;
+ }
+.search {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+}
+.search2 {
+  display:inline-block;
+}
+
+.library {
+  float: left;
+  width: 500px;
+}
+
+.libraryTitle {
+  width: 500px;
+}
+
+.queue {
+  top: 110px;
+  right: 100px;
+  position: fixed;
 }
