@@ -11,6 +11,11 @@ var LibraryEntryView = Backbone.View.extend({
       this.model.enqueue();
     }
   },
+  initialize : function() {
+    this.model.on('enqueue', function() {
+      console.log('library enqueue');
+    });
+  },
 
   render: function() {
     return this.$el.html(this.template(this.model.attributes));
