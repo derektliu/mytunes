@@ -6,7 +6,9 @@ var AppModel = Backbone.Model.extend({
     this.set('songQueue', new SongQueue());
     this.set('search', new SearchModel());
     this.set('library', new Library());
-    this.set('playlist', new Playlist());
+    this.set('currentPlaylist', new CurrentPlaylist());
+    this.set('playlistCollection', new PlaylistCollection());
+    this.set('nextPlaylist', new PlaylistModel());
     // create currentPlaylist
     // create collection of playlist
 
@@ -29,9 +31,30 @@ var AppModel = Backbone.Model.extend({
       this.get('library').query(this.get('search').get('input'));
     }, this);
 
-    this.get('library').on('addToPlaylist', function(song) {
-      this.get('playlist').trigger('addToPlaylist', song);
+    this.get('library').on('addToCurrentPlaylist', function(song) {
+      this.get('currentPlaylist').trigger('addToCurrentPlaylist', song);
     }, this);
+
+    this.get('currentPlaylist').on('savePlaylist', function() {
+      this.get('playlistCollection').createNewPlaylist();
+    }, this);
+/***********************************************************************************/
+
+    this.get('library').on('addToNextPlaylist', function(song) {
+      this.get('playlistCollection').addToNextPlaylist(song);
+    }, this);
+
+    this.get('currentPlaylist').on('doneWithPlaylist', function() {
+      this.get('playlistCollection').addNextPlaylist();
+    }, this);
+
+    this.get('playlistCollection').on('addToCurrentPlaylist', function(song) {
+      this.get('currentPlaylist').trigger('addToCurrentPlaylist', song);
+    }, this);
+
+/***********************************************************************************/    
+
+
   }
 
 });

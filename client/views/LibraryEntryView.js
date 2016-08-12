@@ -14,7 +14,7 @@ var LibraryEntryView = Backbone.View.extend({
     },
     
     'click .addPlaylist': function() {
-      this.model.addToPlaylist();
+      this.model.addToCurrentPlaylist();
     }
   },
 

@@ -20,8 +20,4 @@ var Library = Backbone.Collection.extend({
     });
   },
 
-  search: function(input) {
-    this.where({ title: 'Hot Like Fire'});
-  }
-
 });

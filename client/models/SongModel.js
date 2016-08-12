@@ -25,12 +25,16 @@ var SongModel = Backbone.Model.extend({
     this.trigger('ended', this);
   },
 
-  addToPlaylist: function() {
-    this.trigger('addToPlaylist', this);
+  addToCurrentPlaylist: function() {
+    this.trigger('addToCurrentPlaylist', this);
   },
 
-  removeFromPlaylist: function() {
-    this.trigger('removeFromPlaylist', this);
+  removeFromCurrentPlaylist: function() {
+    this.trigger('removeFromCurrentPlaylist', this);
+  },
+  
+  addToNextPlaylist: function() {
+    this.trigger('addToNextPlaylist', this); 
   }
 
 });
